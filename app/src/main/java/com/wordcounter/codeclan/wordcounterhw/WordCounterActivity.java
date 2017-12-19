@@ -1,8 +1,6 @@
 package com.wordcounter.codeclan.wordcounterhw;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -18,7 +16,7 @@ public class WordCounterActivity extends AppCompatActivity {
     EditText editText;
     TextView textView;
     Button wordCountButton;
-    Button wordOccurenceButton;
+    Button wordOccurrenceButton;
 
 
     @Override
@@ -29,7 +27,7 @@ public class WordCounterActivity extends AppCompatActivity {
         editText = findViewById(R.id.inputText);
         textView = findViewById(R.id.answer);
         wordCountButton = findViewById(R.id.wordCountButton);
-        wordOccurenceButton = findViewById(R.id.occurencesButton);
+        wordOccurrenceButton = findViewById(R.id.occurencesButton);
         textView.setMovementMethod(new ScrollingMovementMethod());
     }
 

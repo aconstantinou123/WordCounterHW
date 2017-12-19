@@ -29,13 +29,15 @@ public class WordCounter {
     }
 
     public String getWordCount(String sentence){
-        String[] result = sentence.split(" ");
+       String removedPunctuation = sentence.replaceAll("[^a-zA-Z0-9'\\s]+"," ").toLowerCase();
+        String[] result = removedPunctuation.split(" ");
         return "The result is " + result.length;
     }
 
     public String countWordOccurence(String sentence){
         Map <String, Integer> wordCount = new HashMap<>();
-            String[] separatedWords = sentence.split(" ");
+        String removedPunctuation = sentence.replaceAll("[^a-zA-Z0-9'\\s]+"," ").toLowerCase();
+            String[] separatedWords = removedPunctuation.split(" ");
                 for (String word : separatedWords){
                     if (wordCount.containsKey(word)){
                         int count = Integer.parseInt(String.valueOf(wordCount.get(word)));
