@@ -31,7 +31,7 @@ public class WordCounterTest {
     public void canSeeWordOccurences(){
         assertEquals("frog : 4\n" +
                 "how : 3\n" +
-                "tea : 2", wordCounter.countWordOccurence("how how how tea tea frog frog frog frog"));
+                "tea : 2\n", wordCounter.countWordOccurence("how how how tea tea frog frog frog frog"));
     }
 
 }

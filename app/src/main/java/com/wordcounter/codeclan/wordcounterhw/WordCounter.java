@@ -33,7 +33,6 @@ public class WordCounter {
         return "The result is " + result.length;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public String countWordOccurence(String sentence){
         Map <String, Integer> wordCount = new HashMap<>();
             String[] separatedWords = sentence.split(" ");
@@ -49,7 +48,14 @@ public class WordCounter {
               HashMap<String,Integer> wordCountHashMap = new HashMap<String, Integer>(wordCount);
                 sortValues(wordCountHashMap);
         ArrayList<String> resultArray = sortValues(wordCountHashMap);
-        return String.join("\n", resultArray);
+        StringBuilder result = new StringBuilder();
+        for (String s : resultArray)
+        {
+            result.append(s);
+            result.append("\n");
+        }
+            return result.toString();
+//        return String.join("\n", resultArray);
             }
 
 
