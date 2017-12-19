@@ -3,4 +3,5 @@
     <string name="text_to_input">Write a sentence</string>
     <string name="buttonText">Word Count</string>
     <string name="occurrenceButton">Count the individual words</string>
+    <string name="result_activity_title">Results</string>
 </resources>

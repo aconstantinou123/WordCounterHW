@@ -39,11 +39,11 @@ public class WordCounter {
         String removedPunctuation = sentence.replaceAll("[^a-zA-Z0-9'\\s]+"," ").toLowerCase();
             String[] separatedWords = removedPunctuation.split(" ");
                 for (String word : separatedWords){
-                    if (wordCount.containsKey(word)){
+                    if (wordCount.containsKey(word) && !word.equals("")){
                         int count = Integer.parseInt(String.valueOf(wordCount.get(word)));
                         wordCount.put(word, count + 1);
                     }
-                    else {
+                    else if (!word.equals("")){
                         wordCount.put(word, 1);
                     }
                 }
